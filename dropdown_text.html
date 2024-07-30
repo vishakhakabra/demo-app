@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="'container">
+        <div class="f-group">
+            <label for="">country</label>
+            <select name="s1ct1" id="s1ct1">
+                <option value=""> - - Country - - </option>
+                <option value="1">INDIA</option>
+                <option value="2">Argentina</option>
+                <option value="3">Brazil</option>
+                <option value="4">USA</option>
+            </select>
+        </div>
+
+
+        <script>
+            //API
+            //Fetch javascript
+            //Foreach loop 
+            function populate(s1, s2) {
+                var s1 = document.getElementById(s1);
+                var s2 = document.getElementById(s2);
+                s2.innerHTML = "";
+                if (s1.value == "india") {
+                    var optionArry = ['delhi|Delhi', 'mumbai|Mumbai', 'bangalore|Banglore',
+                        'hyderabad|Hyderabad'];
+                }
+                else if (s1.value == 'america') {
+                    var optionArry = ['new york|New Yaek', 'los angles|Los Angles', 'chicago|Chicago', 'houston|Houston'];
+                }
+                for (var option in optionArry) {
+                    var pair = optionArry[option].split('l');
+                    var newoption = document.createElement("option");
+                    newoption.value = pair[0];
+                    newoption.innerHTML = pair[0];
+                    s2.option.add(newoption);
+                }
+            }
+        </script>
+</body>
+
+</html>

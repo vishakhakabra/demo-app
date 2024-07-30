@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3> How to get value of radio button </h3>
+    <br>
+    <label> select your gender</label>
+    <br>
+    <input type="radio" name="gender"value="male"/> male
+    <br>
+    <input type="radio" name="gender"value="female"/>female
+    <br>
+    <button onclick="getvalue()"> submit</button>
+    <h4> Result</h4>
+    <p id="output"></p>
+</body>
+<script>
+    function getvalue(){
+
+var data = document.getElementsByName("gender");
+
+var i;
+for (i=0;i<=data.length; i++){
+    if(data[i].checked){
+        document.getElementById("output").innerHTML=data[i].value;
+    }
+}
+    }
+</script>
+</html>
